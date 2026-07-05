@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AmazoneX - E-commerce Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+<body>
+     <header>
+
+    <!-- TOP NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-logo border">
+            <h2>AmazoneX</h2>
+        </div>
+
+        <div class="nav-address border">
+
+            <p class="address-small">
+                Deliver to
+            </p>
+
+            <div class="address-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="address-bold">Nagpur 440001</p>
+            </div>
+
+        </div>
+
+        <div class="nav-search">
+
+            <select>
+
+                <option>All</option>
+                <option>Mobiles</option>
+                <option>Laptops</option>
+                <option>Fashion</option>
+                <option>Electronics</option>
+                <option>Home</option>
+
+            </select>
+
+            <input type="text" placeholder="Search AmazoneX">
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <div class="nav-language border">
+
+            <i class="fa-solid fa-flag"></i>
+            <span>EN</span>
+
+        </div>
+
+        <div class="nav-signin border">
+
+            <p>Hello, Sign in</p>
+            <span>Accounts & Lists</span>
+
+        </div>
+
+        <div class="nav-orders border">
+
+            <p>Returns</p>
+            <span>& Orders</span>
+
+        </div>
+
+        <div class="nav-cart border">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cart-count">0</span>
+
+        </div>
+
+    </nav>
+
+    <!-- SECOND NAVBAR -->
+
+    <div class="panel">
+
+        <div class="panel-all border">
+
+            <i class="fa-solid fa-bars"></i>
+            All
+
+        </div>
+
+        <div class="panel-links">
+
+            <a href="#">Today's Deals</a>
+            <a href="#">Prime</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Electronics</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Fashion</a>
+            <a href="#">Books</a>
+
+        </div>
+
+        <div class="panel-deal">
+
+            <strong>Big Billion Days Sale 🔥</strong>
+
+        </div>
+
+    </div>
+
+</header>
+  
+    <section class="hero-section">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <h1>Great Freedom Festival</h1>
+
+            <p>Up to 80% OFF on Mobiles, Laptops, Fashion & More</p>
+
+            <button id="shop-now">
+                Shop Now
+            </button>
+
+        </div>
+
+    </div>
+
+     </section>
+      <section class="category-heading">
+
+       <h2>Shop By Category</h2>
+
+</section>
+  <main class="shop-section">
+    <div class="box-content">
+
+    <span class="badge">Best Seller</span>
+
+    <h2>Gaming Accessories</h2>
+
+    <div class="box-img img-1"></div>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h3>₹1,499</h3>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+</div>
+
+   <div class="box-content">
+
+    <span class="badge">30% OFF</span>
+
+    <h2>Shop Smartphones</h2>
+
+    <div class="box-img img-2"></div>
+
+    <div class="rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h3>From ₹9,999</h3>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+</div>
+
+    <div class="box-content">
+
+    <span class="badge">Trending</span>
+
+    <h2>Home Essentials</h2>
+
+    <div class="box-img img-3"></div>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h3>From ₹399</h3>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+</div>
+
+    <div class="box-content">
+
+    <span class="badge">Hot Deal</span>
+
+    <h2>Fashion Deals</h2>
+
+    <div class="box-img img-4"></div>
+
+    <div class="rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h3>Up to 70% OFF</h3>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+</div>
+
+    <div class="box">
+      <div class="box-content">
+        <h2>Beauty Picks</h2>
+        <div class="box-img img-5"></div>
+        <p>See more</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-content">
+        <h2>Pet Supplies</h2>
+        <div class="box-img img-6"></div>
+        <p>See more</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-content">
+        <h2>New Arrivals in Toys</h2>
+        <div class="box-img img-7"></div>
+        <p>See more</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-content">
+        <h2>Discover Fashion Trends</h2>
+        <div class="box-img img-8"></div>
+        <p>See more</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="products-row">
+    <h2>Best Sellers</h2>
+
+  <div class="product-card">
+
+    <span class="discount">-40%</span>
+
+    <i class="fa-regular fa-heart wishlist"></i>
+
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones">
+
+    <h3>Wireless Headphones</h3>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐ (245)
+    </div>
+
+    <p class="price">
+        ₹2,999
+        <span>₹4,999</span>
+    </p>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+    <button class="view-btn">
+        Quick View
+    </button>
+
+</div>
+
+      <div class="product-card">
+
+    <span class="discount">-30%</span>
+
+    <i class="fa-regular fa-heart wishlist"></i>
+
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Shoes">
+
+    <h3>Running Shoes</h3>
+
+    <div class="rating">
+        ⭐⭐⭐⭐☆ (172)
+    </div>
+
+    <p class="price">
+        ₹1,899
+        <span>₹2,799</span>
+    </p>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+    <button class="view-btn">
+        Quick View
+    </button>
+
+</div>
+
+      <div class="product-card">
+
+    <span class="discount">-25%</span>
+
+    <i class="fa-regular fa-heart wishlist"></i>
+
+    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Watch">
+
+    <h3>Smart Watch</h3>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐ (621)
+    </div>
+
+    <p class="price">
+        ₹3,999
+        <span>₹5,299</span>
+    </p>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+    <button class="view-btn">
+        Quick View
+    </button>
+
+</div>
+
+      <div class="product-card">
+
+    <span class="discount">-18%</span>
+
+    <i class="fa-regular fa-heart wishlist"></i>
+
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400" alt="Laptop">
+
+    <h3>Laptop Pro</h3>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐ (903)
+    </div>
+
+    <p class="price">
+        ₹62,999
+        <span>₹74,999</span>
+    </p>
+
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+
+    <button class="view-btn">
+        Quick View
+    </button>
+
+</div>
+      <div class="product-card">
+    <span class="discount">-50%</span>
+    <i class="fa-regular fa-heart wishlist"></i>
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400" alt="Perfume">
+    <h3>Luxury Perfume</h3>
+    <div class="rating">
+        ⭐⭐⭐⭐☆ (88)
+    </div>
+    <p class="price">
+        ₹999
+        <span>₹1,999</span>
+    </p>
+    <button class="cart-btn">
+        Add to Cart
+    </button>
+    <button class="view-btn">
+        Quick View
+    </button>
+
+</div>
+  </section>
+<section class="app-download">
+    <div class="app-content">
+        <h2>Download AmazoneX App</h2>
+        <p>Shop faster and get exclusive app-only offers.</p>
+        <div class="app-buttons">
+            <button class="play-store">
+                <i class="fa-brands fa-google-play"></i>
+                Google Play
+            </button>
+            <button class="app-store">
+                <i class="fa-brands fa-apple"></i>
+                App Store
+            </button>
+        </div>
+    </div>
+</section>
+  <footer>
+    <div class="footer-back">
+      Back to top
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <h3>Get to Know Us</h3>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About AmazoneX</a></li>
+        <li><a href="#">Investor Relations</a></li>
+      </ul>
+      <ul>
+        <h3>Make Money with Us</h3>
+        <li><a href="#">Sell products</a></li>
+        <li><a href="#">Sell apps</a></li>
+        <li><a href="#">Become an Affiliate</a></li>
+        <li><a href="#">Advertise Products</a></li>
+      </ul>
+
+      <ul>
+        <h3>Payment Products</h3>
+        <li><a href="#">Business Card</a></li>
+        <li><a href="#">Shop with Points</a></li>
+        <li><a href="#">Reload Balance</a></li>
+        <li><a href="#">Currency Converter</a></li>
+      </ul>
+      <ul>
+        <h3>Let Us Help You</h3>
+        <li><a href="#">Your Account</a></li>
+        <li><a href="#">Your Orders</a></li>
+        <li><a href="#">Shipping Rates</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-logo">
+    <h2>AmazoneX</h2>
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+
+</div>
+<div class="payment-methods">
+    <h3>We Accept</h3>
+    <i class="fa-brands fa-cc-visa"></i>
+    <i class="fa-brands fa-cc-mastercard"></i>
+    <i class="fa-brands fa-cc-paypal"></i>
+    <i class="fa-brands fa-google-pay"></i>
+    <i class="fa-brands fa-apple-pay"></i>
+
+</div>  
+    <div class="footer-bottom">
+    <p>
+        Conditions of Use |
+        Privacy Policy |
+        Cookies |
+        Accessibility |
+        Terms & Conditions
+    </p>
+    <p>
+        © 2026 AmazoneX Clone | Designed by Adweit ❤️
+    </p>
+</div>
+  </footer>
+</body>
+</html>

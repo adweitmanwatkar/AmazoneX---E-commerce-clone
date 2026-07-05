@@ -1,0 +1,1247 @@
+/* =========================
+        GLOBAL
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eaeded;
+    color:#111;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================
+        NAVBAR
+=========================*/
+
+.navbar{
+    height:65px;
+    background:#131921;
+    color:#fff;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
+}
+
+.border{
+    border:1px solid transparent;
+    padding:8px;
+    border-radius:4px;
+    transition:.25s;
+}
+
+.border:hover{
+    border:1px solid #fff;
+}
+
+.nav-logo h2{
+    color:#ff9900;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:-1px;
+}
+
+.address-small{
+    color:#ccc;
+    font-size:12px;
+}
+
+.address-icon{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.address-bold{
+    font-weight:700;
+    font-size:14px;
+}
+
+/* =========================
+      SEARCH BAR
+=========================*/
+
+.nav-search{
+    width:50%;
+    height:42px;
+    display:flex;
+    border-radius:8px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.nav-search:hover{
+    box-shadow:0 0 0 3px #ff9900;
+}
+
+.nav-search select{
+    width:60px;
+    border:none;
+    background:#f3f3f3;
+    text-align:center;
+}
+
+.nav-search input{
+    flex:1;
+    border:none;
+    padding-left:15px;
+    font-size:15px;
+    outline:none;
+}
+
+.nav-search button{
+    width:55px;
+    border:none;
+    background:#febd69;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.nav-search button:hover{
+    background:#f3a847;
+}
+
+/* =========================
+      RIGHT MENU
+=========================*/
+
+.nav-signin p,
+.nav-orders p{
+    font-size:12px;
+}
+
+.nav-signin span,
+.nav-orders span{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-cart{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.nav-cart i{
+    font-size:30px;
+}
+
+.nav-cart span{
+    font-size:15px;
+    font-weight:bold;
+}
+
+/* =========================
+         PANEL
+=========================*/
+
+.panel{
+    background:#232f3e;
+    height:42px;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    padding:0 20px;
+}
+
+.panel-all{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    font-weight:bold;
+}
+
+.panel-links{
+    display:flex;
+    gap:22px;
+    margin-left:30px;
+    flex:1;
+}
+
+.panel-links a{
+    color:#fff;
+    font-size:14px;
+    transition:.3s;
+}
+
+.panel-links a:hover{
+    color:#febd69;
+}
+
+.panel-deal{
+    font-weight:bold;
+}
+
+/* =========================
+      HERO SECTION
+=========================*/
+
+.hero-section{
+
+height:430px;
+
+background:
+linear-gradient(to bottom,
+rgba(0,0,0,.05),
+rgba(0,0,0,.05),
+rgba(234,237,237,1)),
+
+url("https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:flex-end;
+justify-content:center;
+
+}
+
+.hero-message{
+
+width:92%;
+
+background:rgba(255,255,255,.95);
+
+padding:15px;
+
+margin-bottom:30px;
+
+text-align:center;
+
+font-size:15px;
+
+border-radius:8px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.hero-message a{
+
+color:#007185;
+font-weight:bold;
+
+}
+
+.hero-message a:hover{
+
+color:#c7511f;
+
+}
+
+/* =========================
+      SHOP SECTION
+=========================*/
+
+.shop-section{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+padding:22px;
+
+margin-top:-120px;
+
+position:relative;
+
+z-index:10;
+
+}
+
+.box{
+
+background:#fff;
+
+border-radius:12px;
+
+overflow:hidden;
+
+padding:18px;
+
+transition:.35s;
+
+box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 12px 28px rgba(0,0,0,.2);
+
+}
+
+.box-content h2{
+
+font-size:22px;
+
+margin-bottom:15px;
+
+}
+
+.box-img{
+
+height:280px;
+
+border-radius:8px;
+
+background-size:cover;
+
+background-position:center;
+
+transition:.4s;
+
+}
+
+.box:hover .box-img{
+
+transform:scale(1.05);
+
+}
+
+.box-content p{
+
+margin-top:15px;
+
+color:#007185;
+
+font-weight:bold;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.box-content p:hover{
+
+color:#c7511f;
+
+}
+
+/* =========================
+       CATEGORY IMAGES
+=========================*/
+
+.img-1{
+background-image:url("https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-2{
+background-image:url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-3{
+background-image:url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-4{
+background-image:url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-5{
+background-image:url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-6{
+background-image:url("https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-7{
+background-image:url("https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80");
+}
+
+.img-8{
+background-image:url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80");
+}
+/* =========================
+        PRODUCTS ROW
+========================= */
+
+.products-row{
+    background:#fff;
+    margin:25px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.products-row h2{
+    font-size:26px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+/* Horizontal Slider */
+
+.product-slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:15px;
+}
+
+.product-slider::-webkit-scrollbar{
+    height:8px;
+}
+
+.product-slider::-webkit-scrollbar-thumb{
+    background:#bbb;
+    border-radius:20px;
+}
+
+.product-slider::-webkit-scrollbar-thumb:hover{
+    background:#888;
+}
+
+/* Product Card */
+
+.product-card{
+
+    min-width:220px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #ddd;
+    transition:.35s;
+    cursor:pointer;
+    position:relative;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+}
+
+/* Discount Badge */
+
+.product-card::before{
+
+content:"40% OFF";
+
+position:absolute;
+
+top:12px;
+
+left:12px;
+
+background:#cc0c39;
+
+color:#fff;
+
+padding:5px 10px;
+
+font-size:12px;
+
+border-radius:20px;
+
+font-weight:bold;
+
+z-index:10;
+
+}
+
+/* Product Image */
+
+.product-card img{
+
+width:100%;
+
+height:190px;
+
+object-fit:contain;
+
+background:#fff;
+
+padding:20px;
+
+transition:.35s;
+
+}
+
+.product-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* Product Info */
+
+.product-card h3{
+
+font-size:16px;
+
+padding:0 15px;
+
+margin:8px 0;
+
+height:40px;
+
+overflow:hidden;
+
+color:#222;
+
+}
+
+.price{
+
+color:#B12704;
+
+font-size:24px;
+
+font-weight:bold;
+
+padding:0 15px;
+
+margin-top:8px;
+
+}
+
+.price span{
+
+font-size:14px;
+
+color:#565959;
+
+text-decoration:line-through;
+
+margin-left:8px;
+
+}
+
+/* Rating */
+
+.rating{
+
+padding:8px 15px;
+
+color:#FFA41C;
+
+font-size:16px;
+
+}
+
+.buy-btn{
+
+margin:15px;
+
+width:calc(100% - 30px);
+
+height:40px;
+
+background:#FFD814;
+
+border:none;
+
+border-radius:30px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.buy-btn:hover{
+
+background:#F7CA00;
+
+}
+
+/* =========================
+      BIG SALE BANNER
+========================= */
+
+.sale-banner{
+
+margin:25px;
+
+height:260px;
+
+border-radius:15px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:48px;
+
+font-weight:bold;
+
+background:
+
+linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+
+url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* =========================
+        FOOTER
+========================= */
+
+.footer-back{
+
+height:55px;
+
+background:#37475A;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:#fff;
+
+cursor:pointer;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+.footer-back:hover{
+
+background:#485769;
+
+}
+
+.footer-links{
+
+background:#232F3E;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:40px;
+
+padding:50px;
+
+color:white;
+
+}
+
+.footer-links h3{
+
+margin-bottom:18px;
+
+font-size:18px;
+
+}
+
+.footer-links ul{
+
+list-style:none;
+
+}
+
+.footer-links li{
+
+margin:12px 0;
+
+}
+
+.footer-links a{
+
+color:#ddd;
+
+transition:.25s;
+
+}
+
+.footer-links a:hover{
+
+color:#fff;
+
+padding-left:5px;
+
+}
+
+.footer-logo{
+
+height:90px;
+
+background:#232F3E;
+
+border-top:1px solid #3a4553;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.footer-logo h2{
+
+font-size:34px;
+
+color:#FF9900;
+
+letter-spacing:-1px;
+
+}
+
+.footer-bottom{
+
+background:#131A22;
+
+color:#ddd;
+
+text-align:center;
+
+padding:25px;
+
+line-height:2;
+
+font-size:14px;
+
+}
+
+/* =========================
+     COMMON BUTTONS
+========================= */
+
+button{
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* =========================
+      SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#888;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#555;
+
+}
+/* ==========================================
+            PART 3 - FINAL POLISH
+==========================================*/
+
+/* Smooth Animations */
+
+*{
+    transition: background-color .3s,
+                color .3s,
+                border-color .3s;
+}
+
+/* Image Hover */
+
+.box-img,
+.product-card img{
+    transition:transform .45s ease;
+}
+
+.box:hover .box-img{
+    transform:scale(1.06);
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Card Shine Effect */
+
+.box,
+.product-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.box::before,
+.product-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transform:skewX(-20deg);
+    transition:.7s;
+}
+
+.box:hover::before,
+.product-card:hover::before{
+    left:150%;
+}
+
+/* Floating Animation */
+
+@keyframes floating{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.hero-message{
+
+animation:floating 3s infinite;
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.box{
+
+animation:fadeUp .8s ease;
+
+}
+
+.product-card{
+
+animation:fadeUp .8s ease;
+
+}
+
+/* Search Focus */
+
+.nav-search input:focus{
+
+background:#fffdf6;
+
+}
+
+/* Better Button */
+
+.buy-btn{
+
+font-size:15px;
+letter-spacing:.3px;
+
+}
+
+.buy-btn:active{
+
+transform:scale(.96);
+
+}
+
+/* Footer Hover */
+
+.footer-links li{
+
+transition:.25s;
+
+}
+
+.footer-links li:hover{
+
+transform:translateX(6px);
+
+}
+
+/* Hero Overlay */
+
+.hero-section{
+
+position:relative;
+
+}
+
+.hero-section::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,.05),
+rgba(0,0,0,.10),
+rgba(234,237,237,1)
+);
+
+pointer-events:none;
+
+}
+
+/* Shop Cards */
+
+.box{
+
+backdrop-filter:blur(5px);
+
+}
+
+/* Product Shadow */
+
+.product-card{
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+/* ==========================
+        TABLET
+==========================*/
+
+@media(max-width:1100px){
+
+.shop-section{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.nav-search{
+
+width:42%;
+
+}
+
+.footer-links{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.products-row{
+
+margin:15px;
+
+}
+
+.sale-banner{
+
+height:200px;
+font-size:38px;
+
+}
+
+}
+
+@media(max-width:768px){
+.navbar{
+
+height:auto;
+
+padding:10px;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+}
+
+.nav-search{
+
+width:100%;
+
+order:10;
+
+}
+
+.nav-address,
+.nav-orders{
+
+display:none;
+
+}
+
+.panel{
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+.panel-links{
+
+gap:18px;
+
+}
+
+.hero-section{
+
+height:250px;
+
+}
+
+.hero-message{
+
+width:95%;
+font-size:13px;
+
+}
+
+.shop-section{
+
+grid-template-columns:1fr;
+
+padding:12px;
+margin-top:-60px;
+
+}
+
+.box-img{
+
+height:240px;
+
+}
+
+.product-card{
+
+min-width:180px;
+
+}
+
+.footer-links{
+
+grid-template-columns:1fr;
+
+padding:35px;
+
+}
+
+.sale-banner{
+
+height:170px;
+font-size:28px;
+
+}
+
+}
+
+/* ==========================
+       SMALL PHONES
+==========================*/
+
+@media(max-width:480px){
+
+.nav-logo h2{
+
+font-size:26px;
+
+}
+
+.nav-cart i{
+
+font-size:24px;
+
+}
+
+.hero-section{
+
+height:220px;
+
+}
+
+.hero-message{
+
+font-size:12px;
+
+padding:10px;
+
+}
+
+.box{
+
+padding:15px;
+
+}
+
+.box-content h2{
+
+font-size:19px;
+
+}
+
+.box-img{
+
+height:200px;
+
+}
+
+.product-card{
+
+min-width:160px;
+
+}
+
+.product-card h3{
+
+font-size:14px;
+
+}
+
+.price{
+
+font-size:20px;
+
+}
+
+.footer-logo h2{
+
+font-size:28px;
+
+}
+
+.footer-bottom{
+
+font-size:12px;
+
+}
+
+}
+
+/* ==========================
+      LOADING SHIMMER
+==========================*/
+
+.loading{
+
+position:relative;
+overflow:hidden;
+background:#eee;
+
+}
+
+.loading::after{
+
+content:"";
+
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.8),
+transparent
+);
+animation:loading 1.2s infinite;
+
+}
+
+@keyframes loading{
+
+100%{
+
+left:150%;
+
+}
+
+}
+.footer-back{
+
+font-size:15px;
+font-weight:bold;
+letter-spacing:.5px;
+
+}
+::selection{
+background:#ff9900;
+color:#fff;
+}
