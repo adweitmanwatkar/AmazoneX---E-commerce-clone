@@ -1,0 +1,146 @@
+import customtkinter as ctk
+from tkinter import messagebox
+import qrcode
+from PIL import Image, ImageTk
+
+
+# Dark Theme
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue")
+
+
+def generate_qr():
+    data = entry.get()
+
+    if data == "":
+        messagebox.showwarning("Empty", "Please enter text or URL")
+        return
+
+    qr = qrcode.QRCode(
+        version=1,
+        box_size=10,
+        border=4
+    )
+
+    qr.add_data(data)
+    qr.make(fit=True)
+
+    img = qr.make_image(
+        fill_color="#00ff99",
+        back_color="#111111"
+    )
+
+    img.save("generated_qr.png")
+
+    img = img.resize((250, 250))
+
+    qr_img = ImageTk.PhotoImage(img)
+
+    qr_display.configure(image=qr_img)
+    qr_display.image = qr_img
+
+
+# Window
+app = ctk.CTk()
+
+app.title("QR Code Generator")
+app.geometry("800x450")
+app.resizable(False, False)
+
+
+# Heading
+title = ctk.CTkLabel(
+    app,
+    text="QR CODE GENERATOR",
+    font=("Arial", 28, "bold")
+)
+
+title.pack(pady=25)
+
+
+# Main frame
+main_frame = ctk.CTkFrame(
+    app,
+    corner_radius=20
+)
+
+main_frame.pack(
+    padx=30,
+    pady=10,
+    fill="both",
+    expand=True
+)
+
+
+# Left section
+left = ctk.CTkFrame(
+    main_frame,
+    fg_color="transparent"
+)
+
+left.pack(
+    side="left",
+    padx=40,
+    pady=40
+)
+
+
+label = ctk.CTkLabel(
+    left,
+    text="Enter Text / URL",
+    font=("Arial",16)
+)
+
+label.pack(pady=10)
+
+
+entry = ctk.CTkEntry(
+    left,
+    width=280,
+    height=40,
+    placeholder_text="https://example.com"
+)
+
+entry.pack(pady=15)
+
+
+button = ctk.CTkButton(
+    left,
+    text="Generate QR",
+    width=200,
+    height=45,
+    corner_radius=20,
+    command=generate_qr
+)
+
+button.pack(pady=20)
+
+
+
+# Right section
+right = ctk.CTkFrame(
+    main_frame,
+    corner_radius=20
+)
+
+right.pack(
+    side="right",
+    padx=40,
+    pady=40
+)
+
+
+qr_display = ctk.CTkLabel(
+    right,
+    text="QR will appear here",
+    width=250,
+    height=250
+)
+
+qr_display.pack(
+    padx=20,
+    pady=20
+)
+
+
+app.mainloop()
